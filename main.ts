@@ -176,7 +176,7 @@ const getNumberImage = (forNumber: number) => {
         # . # . #
     `);
             break;
-            default:
+        default:
             image = images.iconImage(IconNames.Cow);
             break;
     }
@@ -188,6 +188,7 @@ let currentDice: number;
 
 const selectCurrentDice = () => {
     currentDice = dice[currentPos];
+    basic.clearScreen();
     basic.showString('d' + currentDice, 50);
 };
 
@@ -222,7 +223,7 @@ input.onGesture(Gesture.Shake, () => {
     }
 });
 
-input.onLogoEvent(TouchButtonEvent.Pressed, function() {
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.clearScreen();
 });
 
